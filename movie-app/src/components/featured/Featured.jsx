@@ -56,4 +56,5 @@ const Featured = ({ type }) => {
     </div>
   );
 }
+
 export default Featured

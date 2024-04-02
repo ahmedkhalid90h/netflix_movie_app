@@ -46,7 +46,7 @@ router.delete("/:id", verify, async (req,res) => {
 
 
 // Get
-router.get("/find/:id", verify, async (req,res) => {
+router.get("/find/:id", async (req,res) => {
         try {
             const user = await User.findById(req.params.id)
             const { password, ...info } = user._doc
@@ -57,7 +57,19 @@ router.get("/find/:id", verify, async (req,res) => {
 })
 
 // Get All
-
+router.get("/", verify, async (req,res) => {
+    const query = req.query.new
+    if (req.user.isAdmin){
+        try {
+            const user = query ? await User.find().limit(10) :await User.find()
+            res.status(200).json(user)
+        } catch (err) {
+            res.status(500).json({ message: "Internal Server Error" });
+        }
+    } else {
+        res.status(403).json("You aren\'t allowed to see all users!")
+    }
+})
 
 // Get User Stats
 

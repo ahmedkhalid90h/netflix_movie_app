@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import CryptoJS from 'crypto-js';
+import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
 const router = Router();
@@ -38,9 +39,14 @@ router.post("/login", async (req, res) => {
         originalPassword !== req.body.password &&
             res.status(401).json("Wrong password or email!")
 
+        const accessToken = jwt.sign(
+                {id: user._id, isAdmin: user._isAdmin},
+                process.env.SECRET_KEY,
+                { expiresIn: "7d" }
+            )
         const { password, ...info } = user._doc
 
-        res.status(200).json(info)
+        res.status(200).json({...info, accessToken})
     } catch (err) {
             res.status(500).json({ message: "Internal Server Error" });
         }

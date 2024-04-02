@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGO_URL).then(
 
 const app = express();
 
+app.use(express.json())
 app.use("/api/auth", authRouter); // Use the correct variable name here
 
 app.listen(4000, () =>

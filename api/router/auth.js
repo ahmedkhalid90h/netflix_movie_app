@@ -26,4 +26,26 @@ router.post("/register", async (req, res) => {
     }
 })
 
+// Login
+router.post("/login", async (req, res) => {
+    try {
+        const user = await User.findOne({ email: req.body.email})
+        !user && res.status(404).json("Wrong password or email!")
+        
+        const bytes = CryptoJS.AES.decrypt(user.password, process.env.SECRET_KEY)
+        const originalPassword = bytes.toString(CryptoJS.enc.Utf8)
+
+        originalPassword !== req.body.password &&
+            res.status(401).json("Wrong password or email!")
+
+        const { password, ...info } = user._doc
+
+        res.status(200).json(info)
+    } catch (err) {
+            res.status(500).json({ message: "Internal Server Error" });
+        }
+    
+})
+
+
 export default router

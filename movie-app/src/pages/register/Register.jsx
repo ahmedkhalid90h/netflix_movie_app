@@ -32,12 +32,12 @@ const Register = () => {
                 </p>{!email ? (
                     <div className="input">
                         <input type="email" placeholder='Write your email' ref={emailRef} />
-                        <button className='registerButton' onClick={handeleStart()}>Get Started</button>
+                        <button className='registerButton' onClick={handeleStart}>Get Started</button>
                     </div>
                 ) : (
                     <form className="input">
                         <input type="password" placeholder='Write your password' ref={passwordRef} />
-                        <button className='registerButton' onClick={handeleFinish()}>Started</button>
+                        <button className='registerButton' onClick={handeleFinish}>Started</button>
                     </form>
                 )}
             </div>

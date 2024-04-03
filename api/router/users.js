@@ -8,7 +8,8 @@ const router = Router();
 // Update
 router.put("/:id", verify, async (req,res) => {
     const user = await User.findById(req.params.id);
-    if (req.user.id === req.params.id || user.isAdmin) {
+
+    if (user.id === req.params.id || user.isAdmin) {
         if (req.body.password) {
             req.body.password = CryptoJS.AES.decrypt(
                 req.body.password,
@@ -33,7 +34,9 @@ router.put("/:id", verify, async (req,res) => {
 
 // Delete
 router.delete("/:id", verify, async (req,res) => {
-    if (req.user.id === req.params.id || req.user.isAdmin) {
+    const user = await User.findById(req.params.id);
+
+    if (user.id === req.params.id || user.isAdmin) {
         try {
             await User.findByIdAndDelete(req.params.id)
             res.status(200).json('User has been deleted...')
@@ -58,12 +61,15 @@ router.get("/find/:id", async (req,res) => {
 })
 
 // Get All
-router.get("/", verify, async (req,res) => {
+router.get("/:id", verify, async (req,res) => {
+    const user = await User.findById(req.params.id);
     const query = req.query.new
-    if (req.user.isAdmin){
+    console.log(user.isAdmin)
+    
+    if (user.isAdmin){
         try {
-            const user = query ? await User.find().limit(10) :await User.find()
-            res.status(200).json(user)
+            const userQuery = query ? await User.find().limit(10) :await User.find()
+            res.status(200).json(userQuery)
         } catch (err) {
             res.status(500).json({ message: "Internal Server Error" });
         }
@@ -71,6 +77,7 @@ router.get("/", verify, async (req,res) => {
         res.status(403).json("You aren\'t allowed to see all users!")
     }
 })
+
 
 // Get User Stats
 

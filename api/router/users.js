@@ -7,6 +7,7 @@ const router = Router();
 
 // Update
 router.put("/:id", verify, async (req,res) => {
+    console.log(req.user.isAdmin)
     if (req.user.id === req.params.id || req.user.isAdmin) {
         if (req.body.password) {
             req.body.password = CryptoJS.AES.decrypt(

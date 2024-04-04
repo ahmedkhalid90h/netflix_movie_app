@@ -5,7 +5,7 @@
   <h3 align="center">Netflix Clone</h3>
 
   <p align="center">
-    <a href="https://ahmedkhalid90h.github.io/test-page/">View Demo</a>
+    <a href="https://ahmedkhalid90h.github.io/palestine_movie_app/">View Demo</a>
     ·
     
   </p>

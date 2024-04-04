@@ -1,7 +1,7 @@
 <div align="center">
-  <a href="./images/download.png">
+  <img src="./images/download.png">
     <img src="./public/assets/netflix-logo.png" alt="Logo" width="100" height="32">
-  </a>
+  </img>
 
   <h3 align="center">Netflix Clone</h3>
 

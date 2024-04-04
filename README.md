@@ -1,3 +1,64 @@
+<div align="center">
+  <a href="http://netflix-clone-with-tmdb-using-react-mui.vercel.app/">
+    <img src="./public/assets/netflix-logo.png" alt="Logo" width="100" height="32">
+  </a>
+
+  <h3 align="center">Netflix Clone</h3>
+
+  <p align="center">
+    <a href="https://ahmedkhalid90h.github.io/test-page/">View Demo</a>
+    ·
+    
+  </p>
+</div>
+
+
+<br />
+
+<div align="center">
+  <img src="./images/home-page.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Home Page</p>
+  <img src="./images/mini-portal.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Mini Portal</p>
+  <img src="./images/detail-modal.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Detail Modal</p>
+  <img src="./images/grid-genre.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Grid Genre Page</p>
+  <img src="./images/watch.png" alt="Logo" width="100%" height="100%">
+  <p align="center">Watch Page with customer contol bar</p>
+</div>
+
+<br>
+
+## Which features this project deal with
+
+- How to create and use [Custom Hooks](https://reactjs.org/docs/hooks-custom.html)
+- How to use [Context](https://reactjs.org/docs/context.html) and its provider
+- How to use lazy and Suspense for [Code-Splitting](https://reactjs.org/docs/code-splitting.html)
+- How to use a new [lazy](https://reactrouter.com/en/main/route/lazy) feature of react-router to reduce bundle size.
+- How to use data [loader](https://reactrouter.com/en/main/route/loader) of react-router, and how to use redux dispatch in the loader to fetch data before rendering component.
+- How to use [Portal](https://reactjs.org/docs/portals.html)
+- How to use [Fowarding Refs](https://reactjs.org/docs/forwarding-refs.html) to make components reusuable
+- How to create and use [HOC](https://reactjs.org/docs/higher-order-components.html)
+- How to customize default theme of [MUI](https://mui.com/)
+- How to use [RTK](https://redux-toolkit.js.org/introduction/getting-started)
+- How to use [RTK Query](https://redux-toolkit.js.org/rtk-query/overview)
+- How to customize default classname of [MUI](https://mui.com/material-ui/experimental-api/classname-generator)
+- Infinite Scrolling(using [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API))
+- How to make awesome carousel using [slick-carousel](https://react-slick.neostack.com)
+
+<br>
+
+## ✹ Link to the Project ✹
+* [Todo list React App](https://ahmedkhalid90h.github.io/React_TO_DO_List_Project/) 
+
+
+Known Issues
+---
+To report issues, please email me at ahmedkhalid90h@gmail.com.
+
+<br>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +129,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## ✹ Link to the Project ✹
+* [Todo list React App](https://ahmedkhalid90h.github.io/React_TO_DO_List_Project/) 
+
+
+Known Issues
+---
+To report issues, please email me at ahmedkhalid90h@gmail.com.

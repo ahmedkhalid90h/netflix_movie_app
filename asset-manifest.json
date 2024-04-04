@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/palestine_movie_app/static/css/main.7abce600.css",
+    "main.js": "/palestine_movie_app/static/js/main.54d69057.js",
+    "static/media/EG-ar-20240326-popsignuptwoweeks-perspective_alpha_website_small.jpg": "/palestine_movie_app/static/media/EG-ar-20240326-popsignuptwoweeks-perspective_alpha_website_small.bae488adeed4e2746ce5.jpg",
+    "index.html": "/palestine_movie_app/index.html",
+    "main.7abce600.css.map": "/palestine_movie_app/static/css/main.7abce600.css.map",
+    "main.54d69057.js.map": "/palestine_movie_app/static/js/main.54d69057.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7abce600.css",
+    "static/js/main.54d69057.js"
+  ]
+}
